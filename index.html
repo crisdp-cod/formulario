@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cotação de Seguro</title>
+
+</head>
+<body>
+    <h2>Formulário de Cotação Online de Seguro Gerais</h2>
+    <p>Por favor, preencha o Formulário de Cotação de Seguro Geral para obter a cotação de seguro desejada. Selecione as opções que mais combinam com as suas necessidades e você será contactado por um dos membros de nosso time. As informações fornecidas neste formulário de cotação de seguro geral não serão tornadas públicas.</p>
+    <form action="/enviar-cotacao" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+</body><label for="data_nascimento">Data de Nascimento (DD/MM/AAAA):</label><br>
+<input type="text" id="data_nascimento" name="data_nascimento" placeholder="DD/MM/AAAA" required><br><br>
+
+<label for="email">E-mail:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="ocupacao">Ocupação:</label><br>
+<input type="text" id="ocupacao" name="ocupacao"><br><br>
+
+<label>Eu estou interessado no(s) seguinte(s) tipo(s) de seguro:</label><br>
+<input type="checkbox" name="interesse[]" value="vida"> Seguro de vida<br>
+<input type="checkbox" name="interesse[]" value="saude"> Seguro de saúde<br>
+<input type="checkbox" name="interesse[]" value="casa"> Seguro de casa<br>
+<input type="checkbox" name="interesse[]" value="carro"> Seguro de carro<br>
+<input type="checkbox" name="interesse[]" value="hipoteca"> Seguro de hipoteca<br>
+<input type="checkbox" name="interesse[]" value="empresa"> Seguro de empresa<br>
+<input type="checkbox" name="interesse[]" value="invalidez"> Seguro de invalidez<br>
+<input type="checkbox" name="interesse[]" value="credito"> Seguro de crédito<br>
+<input type="checkbox" name="interesse[]" value="responsabilidade"> Seguro de responsabilidade<br>
+<input type="checkbox" name="interesse[]" value="crianca"> Seguro de criança<br><br>
+
+<label>Qual(is) tipo(s) de seguro você possui atualmente?</label><br>
+<input type="checkbox" name="atuais[]" value="vida"> Seguro de vida<br>
+<input type="checkbox" name="atuais[]" value="saude"> Seguro de saúde<br>
+<input type="checkbox" name="atuais[]" value="casa"> Seguro de casa<br>
+<input type="checkbox" name="atuais[]" value="carro"> Seguro de carro<br>
+<input type="checkbox" name="atuais[]" value="hipoteca"> Seguro de hipoteca<br>
+<input type="checkbox" name="atuais[]" value="empresa"> Seguro de empresa<br>
+<input type="checkbox" name="atuais[]" value="invalidez"> Seguro de invalidez<br>
+<input type="checkbox" name="atuais[]" value="credito"> Seguro de crédito<br>
+<input type="checkbox" name="atuais[]" value="responsabilidade"> Seguro de responsabilidade<br>
+<input type="checkbox" name="atuais[]" value="crianca"> Seguro de criança<br><br>
+
+<label for="expiracao">Quando o seu seguro expira? (DD/MM/AAAA):</label><br>
+<input type="text" id="expiracao" name="expiracao" placeholder="DD/MM/AAAA"><br><br>
+
+<label>O quanto você está disposto a mudar o seu agente de seguro?</label><br>
+<select name="disposicao">
+    <option value="extremamente">Extremamente disposto</option>
+    <option value="muito">Muito disposto</option>
+    <option value="moderadamente">Moderadamente disposto</option>
+    <option value="pouco">Pouco disposto</option>
+    <option value="nao">Não estou disposto</option>
+</select><br><br>
+
+<label for="orcamento">O quanto você está disposto a gastar em um seguro mensal? (BRL):</label><br>
+<input type="number" id="orcamento" name="orcamento" min="0" step="0.01" placeholder="0.00"><br><br>
+
+<input type="submit" value="Obtenha sua cotação de seguro">
+</form>
+</body>
+</html>
